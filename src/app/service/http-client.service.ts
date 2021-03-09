@@ -16,4 +16,8 @@ export class HttpClientService {
   {
     return this.httpClient.get<User[]>('http://localhost:8443/api/users');
   }
+
+  addUser(newUser: User | undefined) {
+    return this.httpClient.post<User>('http://localhost:8443/api/users/add', newUser);
+  }
 }
