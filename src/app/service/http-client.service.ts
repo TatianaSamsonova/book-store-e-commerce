@@ -20,4 +20,8 @@ export class HttpClientService {
   addUser(newUser: User | undefined) {
     return this.httpClient.post<User>('http://localhost:8443/api/users/add', newUser);
   }
+
+  deleteUser(id: number) {
+    return this.httpClient.delete<User>('http://localhost:8443/api/users/' + id);
+  }
 }
