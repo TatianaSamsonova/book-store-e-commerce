@@ -29,4 +29,8 @@ export class HttpClientService {
   getBooks() {
     return this.httpClient.get<Book[]>('http://localhost:8443/api/books');
   }
+
+  addBook(newBook: Book) {
+    return this.httpClient.post<Book>('http://localhost:8443/api/books/add', newBook);
+  }
 }
