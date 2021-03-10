@@ -47,7 +47,7 @@ export class AddbookComponent implements OnInit {
     uploadData.append('imageFile', this.selectedFile, this.selectedFile.name);
     this.selectedFile.imageName = this.selectedFile.name;
 
-    this.httpClient.post('http://localhost:8443/api/books/upload', uploadData, { observe: 'response' })
+    this.httpClient.post('http://localhost:8443/api/images/upload', uploadData, { observe: 'response' })
       .subscribe((response) => {
           if (response.status === 200) {
             this.httpClientService.addBook(this.book).subscribe(
