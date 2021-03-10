@@ -33,4 +33,8 @@ export class HttpClientService {
   addBook(newBook: Book) {
     return this.httpClient.post<Book>('http://localhost:8443/api/books/add', newBook);
   }
+
+  deleteBook(id: string | number) {
+    return this.httpClient.delete<Book>('http://localhost:8443/api/books/' + id);
+  }
 }

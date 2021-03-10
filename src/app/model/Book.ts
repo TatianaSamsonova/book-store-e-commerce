@@ -5,4 +5,5 @@ export class Book {
   author!: string;
   price!: number;
   picByte!: string;
+  retrievedImage!: string;
 }
